@@ -1,0 +1,78 @@
+hostname: myhost
+mounts:
+- - /dev/vdb
+  - /mnt/data
+  - ext4
+  - ""
+write_files:
+  - content: |
+      {
+      "graph": "/mnt/data/docker-data/"
+      }
+    path: /etc/docker/daemon.json
+rancher:
+  ssh:
+    keys:
+      dsa: |+
+        -----BEGIN DSA PRIVATE KEY-----
+        MIIBvQIBAAKBgQD+L9yTr7uNwzxWwUZMFlTqTlvlcaRBxMlhW+8+fne28PCV0F32
+        cZAL33HoNnBGQ/q4Mc+z7s6etobDjenNXtirMgyXszNYYvadXrGYKTWTeP0BAp1o
+        QkvFXf2s22Y6niN6yXC6Q7102d817Y+vg2NwOKiQoIEtOibU98HfC773OQIVAJdx
+        LEktgG3oYpbrwj1oRL21QMpHAoGBAIKPIVnJ0Rx3ADH9pTsj6NHRPU4GqPc57SkU
+        yB3lSshwDh6tHCrT83SYY46JAcGh8bghJCpN6uAJdg3asBia1DPxySo1I1n5JETJ
+        FoRkTDpehDsELcSyGRcSG+Fvf4/Z7oe4xPEDGm+ReFkwCk5Ki1PvQMOEFFuo1uBy
+        rqDL055WAoGBAJQeWLS+IabCZygFr1nQQdidB513/JM17f9hUmwVdmoHw03lY9UY
+        cxULh8mp5h9Pu9qXQviTXuvUe0TNEq2crnweaZfZm1B8S7florDvSP5gmNEwkVId
+        +jYu5fWvc9CdoNeri9V6w2aVgLdjm/MFZfE0YVdZZHUsBKYokshqUrWWAhUAkRPR
+        DAsCd8Hhwniujr2qYN6Jj9c=
+        -----END DSA PRIVATE KEY-----
+      dsa-pub: |+
+        ssh-dss AAAAB3NzaC1kc3MAAACBAP4v3JOvu43DPFbBRkwWVOpOW+VxpEHEyWFb7z5+d7bw8JXQXfZxkAvfceg2cEZD+rgxz7Puzp62hsON6c1e2KsyDJezM1hi9p1esZgpNZN4/QECnWhCS8Vd/azbZjqeI3rJcLpDvXTZ3zXtj6+DY3A4qJCggS06JtT3wd8Lvvc5AAAAFQCXcSxJLYBt6GKW68I9aES9tUDKRwAAAIEAgo8hWcnRHHcAMf2lOyPo0dE9Tgao9zntKRTIHeVKyHAOHq0cKtPzdJhjjokBwaHxuCEkKk3q4Al2DdqwGJrUM/HJKjUjWfkkRMkWhGRMOl6EOwQtxLIZFxIb4W9/j9nuh7jE8QMab5F4WTAKTkqLU+9Aw4QUW6jW4HKuoMvTnlYAAACBAJQeWLS+IabCZygFr1nQQdidB513/JM17f9hUmwVdmoHw03lY9UYcxULh8mp5h9Pu9qXQviTXuvUe0TNEq2crnweaZfZm1B8S7florDvSP5gmNEwkVId+jYu5fWvc9CdoNeri9V6w2aVgLdjm/MFZfE0YVdZZHUsBKYokshqUrWW root@ov-a8c6dd.infomaniak.ch
+      ecdsa: |+
+        -----BEGIN EC PRIVATE KEY-----
+        MHcCAQEEIPA0WCR5kHhi1Qj6nRwvP3TuquoPpooEtdWT5suu9GVooAoGCCqGSM49
+        AwEHoUQDQgAEhHCBQAm781cnYnc6a/KvXrRymPOjRzl1K0j3QH+UHuCMiK7tN3GJ
+        l2k0xf7JxknsDiIF7oQyUi8fAdRUYHMdsQ==
+        -----END EC PRIVATE KEY-----
+      ecdsa-pub: |+
+        ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIRwgUAJu/NXJ2J3Omvyr160cpjzo0c5dStI90B/lB7gjIiu7TdxiZdpNMX+ycZJ7A4iBe6EMlIvHwHUVGBzHbE= root@ov-a8c6dd.infomaniak.ch
+      ed25519: |+
+        -----BEGIN OPENSSH PRIVATE KEY-----
+        b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+        QyNTUxOQAAACAA71H5eKsjnhlu0a0GDEtINKeynaxqkXQEglzGrSoujwAAAKCzotPIs6LT
+        yAAAAAtzc2gtZWQyNTUxOQAAACAA71H5eKsjnhlu0a0GDEtINKeynaxqkXQEglzGrSoujw
+        AAAEA/TlB1V2G+yXsO0WVslL4/KcE30b+fD8DGSLP8/Y5H1QDvUfl4qyOeGW7RrQYMS0g0
+        p7KdrGqRdASCXMatKi6PAAAAHHJvb3RAb3YtYThjNmRkLmluZm9tYW5pYWsuY2gB
+        -----END OPENSSH PRIVATE KEY-----
+      ed25519-pub: |+
+        ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIADvUfl4qyOeGW7RrQYMS0g0p7KdrGqRdASCXMatKi6P root@ov-a8c6dd.infomaniak.ch
+      rsa: |+
+        -----BEGIN RSA PRIVATE KEY-----
+        MIIEogIBAAKCAQEAryUr1iXpRSBPYi1vmPH3tulvL3nkUAK75VBICbvdEVgGIKkk
+        J6K98FXYY36jZu+Ix3DT4CSnDzcb/gkxTpLSStXpE7HUk2uYz90N8Iu60hJ8MII5
+        xYIP1f0HW59EYaG1ZDh5ex5BZQ7hQm/DpHKcQ7aO32mK9ptztvDmg9D9SapMuov0
+        EWKv2uhMLGWlWsWQvfO2/NSwrneUZ8ElIV9j6z5wrKhBZnokiha8iRs1yNd04rRM
+        q89E/Ae7b+gKFm3K9mfLKToodHbsT72f3ee8eydr4SQDO3VqONnKeTJhOil3TKxM
+        u3sJmlW8ur1RA9JWI/Ah0wv3h2whqxW2mGnaKwIDAQABAoIBAGV3JFkwp15LpJGc
+        /uzdKQQHYklf1TvhCZeEledFtYGJvCsJsg9gQadNJEonoGRO2q+oFqbgtQOkiov2
+        KWF6v2dpW1j0idFJ4UJyrtOvL3DqEpZLq0pX2fK/Xpbews/Izfwcl4wS8BGquCcz
+        9mR7nTnBNi4Jx96sGjJehzzQQxx8HSJuoaexsi1l1mgbcCBzYOFgo8sGt4uJbpl7
+        gnDvdXCTvguotgJjGAnHVUL0eH0uB/uoVArIR3oTIzYM/vNtJElpooazyS/xywfC
+        5ukO0FM3xE3kNigSvtFp/7WgoLUcFwafHBc56lgrjjnMpVYeQ4LFILFYnKMA0gMp
+        Ut7RnJkCgYEA5zU97DDLj14L3Z/mSLm07YBrWuWjNSjrHr+K4kigYdkEobBk80Ps
+        Ax0y4zEKXlT8oPtpGSdn9HTaA4UpBYJK1vN1FwtT6jJnXOkPlg/1zHMy9DjnYqMY
+        ix7d4CSRiC93Un4nh8nfy13wFnlyKj3AyzmsDNXvxRuBH+c7aoOy1ccCgYEAwez7
+        ayzA5FzK7dnwPWCkUGGI/8dQ2/KBCxUjtmStkaZjfNmSyJvSaTc471EHOTlaBVmL
+        8ldvMe1jEkt5utufOtHQhndp0G9PqAq66Y3uh6yTyX7fpuXNpoymzuWl4eIbL/YJ
+        YvoTQKY0Q2Qnd9syMzSzdiQbnEcbRWGFjgRMyH0CgYAHCN2rdAidghUGVzkgeVYB
+        6+hYSahfk7EjrFxDakZG891qNf28URK7PYYw12sjV56gH0YhV8uX6n4/oSuQWViB
+        lcK4QsX42DPA5e5teGrYH6ErQRf5LlEu2m+RxEsRQ7BzuBbn0MKYY3FMncFVe6+D
+        /2s2sMOs0ZtqJxTttrgYPQKBgESz4nabylKdFT+iwFveSxg3FcQYJutlRJZajOZn
+        UJ6TJhfrNPdhTO/9omwWdsqtKNlQWiYnF7vGcBzhJGUwvX6nKosY7yHq7XuJIaLw
+        p5rlZw4xpqaIL41bsxUFgvk9k4gwUC8CjaOPvmBJsTnjLCu79gBa1nVNM7omzJv9
+        pf45AoGAFMQI7L2s+COSno938wTnxffRnvdfPZ2IBJAzOCFfe7LOK+jEVTSC6f+A
+        BPBLOfPwtwIXLhwGPKyc5uvvE4YJFGDfe04tRPjYVbXWeTwj2APOV2D9RSdMippP
+        cm5+0fCCgqnPQbE1pS3Ivc+x+csHs97yQendd7eqIM6B+hV0aDU=
+        -----END RSA PRIVATE KEY-----
+      rsa-pub: |+
+        ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvJSvWJelFIE9iLW+Y8fe26W8veeRQArvlUEgJu90RWAYgqSQnor3wVdhjfqNm74jHcNPgJKcPNxv+CTFOktJK1ekTsdSTa5jP3Q3wi7rSEnwwgjnFgg/V/Qdbn0RhobVkOHl7HkFlDuFCb8OkcpxDto7faYr2m3O28OaD0P1Jqky6i/QRYq/a6EwsZaVaxZC987b81LCud5RnwSUhX2PrPnCsqEFmeiSKFryJGzXI13TitEyrz0T8B7tv6AoWbcr2Z8spOih0duxPvZ/d57x7J2vhJAM7dWo42cp5MmE6KXdMrEy7ewmaVby6vVED0lYj8CHTC/eHbCGrFbaYador root@ov-a8c6dd.infomaniak.ch
