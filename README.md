@@ -6,7 +6,8 @@ Some tips to install rancher OS and server
  - - We recommand you change your docker data system to you external drive. This make backup and migaration easier and provide way to increase disk memory. See section `write_files`
  - - And don't forget to mount the disk
  - - If you do on baremetal you want probably to add ip configuration.
- - - ```
+ - - 
+```
 network:
     interfaces:
       eth0:
