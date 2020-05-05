@@ -27,3 +27,4 @@ network:
  - If you need to reinstall the agents etcd. You need to clean a lot of host path. [This file help you.](./scripts/clean.sh)
  - You need to precise the agents local and public ip if you are in a NAT. Some cloud provider are in NATs Azure, Infomaniak, ...
  - For Ingress to work a full public ip is recommanded.
+ - If you enable Github authentication you may loose the admin local login.
