@@ -7,9 +7,11 @@ mounts:
 write_files:
   - content: |
       {
-      "graph": "/mnt/data/docker-data/"
+      "data-root": "/mnt/data/docker-data/"
       }
     path: /etc/docker/daemon.json
+ssh_authorized_keys:
+  - ssh-rsa AAA...ZZZ example1@rancher
 rancher:
   ssh:
     keys:
