@@ -13,7 +13,7 @@ network: # only if on baremetal
         mtu: 1500
         dhcp: false
 mounts:
-- - /dev/vdb
+- - /dev/vdb # mkfs.ext4 /dev/vdb to format
   - /mnt/data
   - ext4
   - ""
